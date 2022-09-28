@@ -16,15 +16,3 @@ Ans: grep -c ‘GET’ ./access.log
 Ans: cat ./split-me.txt | sed s/\;/\\n/g
 Ans: echo {1..100}
 Ans: find . -name ‘-[a-z]*’ -delete
-Ans: find . -name ‘*.doc’ -delete
-Ans: find . -type f -not \( -name ‘*.txt’ -or -name ‘*.exe’ \) -delete
-Ans: find . -name “*.txt” -exec sed -i ‘s/challenges are difficult//g’ {} +
-Ans: awk ‘{s+=$1} END {print s}’ sum-me.txt/
-Ans: find . -type f -printf "%f\n"
-Ans:find `pwd` -type f -exec bash -c 'mv "$1" "${1%.*}"' - '{}' \;
-Ans:find . -type f -printf "%f\n" | xargs -0 -I {} echo {} | tr ' ' '.'
-Ans: find . -type f -name ‘[0–9]*’ -printf ‘%f\n’
-Ans: sed ‘25q;d’ faces.txt
-Ans: awk ‘!c[$0]++’ faces.txt
-Ans: < war_and_peace.txt tr -s ‘!’ | sed ‘s/!\([a-z]\)/\1/g’ | sed ‘s/!\( [a-z]\)/\1/g’ | sed ‘s/!\.!/./g’ | sed ‘s/ !/ /g’
-Ans: comm -12 <(cut -d’ ‘ -f1 access.log.1 | sort) <(cut -d’ ‘ -f1 access.log.2 | sort)
